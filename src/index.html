@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link href="./output.css" rel="stylesheet">
+
+  <title>quicklist</title>
+</head>
+<body class="font-inter flex flex-col gap-16 items-center justify-center p-6">
+  <header class="h-10 w-40 flex gap-2 items-center tracking-[-2%]">
+    <img src="./assets/images/Logo.svg" alt="Logo quicklist" class="h-6 w-8">
+    <h1 class="font-bold text-2xl leading-[40px]">quicklist</h1>
+  </header>
+  <main class="w-[627px] h-80 flex flex-col gap-11">
+    <!-- Title -->
+    <div class="flex flex-col gap-4">
+      <a href="#" class="flex items-center text-brand text-sm leading-4 hover:text-brand-hover">
+        <i class="hgi hgi-stroke hgi-arrow-left-02"></i>
+        Voltar
+      </a>
+      <h2 class="text-2xl leading-8 font-bold">Compras da semana</h2>
+    </div>
+    <!-- Add item -->
+     <div class="flex gap-4 w-[627px] h-11">
+      <input 
+        type="text" 
+        placeholder="Adicione um novo item"
+        class="w-[451px] px-5 border-border-primary bg-bg-secondary border-2 rounded-lg text-base leading-[140%] text-content-tertiary hover:border-border-hover focus:outline-brand focus-within:placeholder:text-content-primary"
+      >
+      <button class="bg-brand text-always-white w-40 h-11 rounded-xl cursor-pointer hover:bg-brand-hover font-semibold">
+        Adicionar item
+      </button>
+     </div>
+     <!-- List of items -->
+      <div>
+        <ul>
+          <li class="w-[627px] h-12 flex items-center py-2 px-3 justify-between">
+            <label>
+              <input type="checkbox" name="selected" id="itemSelected" class=" hidden peer group"/>
+              <div class="border border-border-primary bg-bg-secondary w-4 h-4 rounded-md cursor-pointer hover:border-border-hover">
+                <span></span>
+              </div>
+            </label>
+            <span class="w-[531px]">Pão de forma</span>
+            <i class="hgi hgi-stroke hgi-delete-02 text-base text-content-tertiary cursor-pointer hover:text-content-secondary "></i>
+          </li>
+        </ul>
+      </div>
+  </main>
+</body>
+</html>
