@@ -3,8 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="./assets/images/Logo.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+  <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-solid-rounded.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -15,14 +17,14 @@
   <title>quicklist</title>
 </head>
 
-<body class="font-inter flex flex-col gap-16 items-center bg-bg-primary justify-center p-6">
+<body class="font-inter flex flex-col gap-16 items-center w-screen h-full bg-bg-primary justify-center md:p-6">
   <header class="h-10 w-40 flex gap-2 items-center tracking-[-2%]">
     <img src="./assets/images/Logo.svg" alt="Logo quicklist" class="h-6 w-8">
     <h1 class="font-bold text-2xl leading-[40px]">quicklist</h1>
   </header>
-  <main class="w-[627px] h-80 flex flex-col gap-11">
+  <main class="md:w-[800px] h-80 flex flex-col gap-11 w-full p-8 items-center">
     <!-- Title -->
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-4 items-start w-full md:w-[627px] ">
       <a href="#" class="flex items-center text-brand text-sm leading-4 hover:text-brand-hover">
         <i class="hgi hgi-stroke hgi-arrow-left-02"></i>
         Voltar
@@ -30,17 +32,17 @@
       <h2 class="text-2xl leading-8 font-bold">Compras da semana</h2>
     </div>
     <!-- Add item -->
-    <form class="flex gap-4 w-[627px] h-11">
+    <form class="flex gap-4 md:w-[627px] md:flex-row w-full h-28 flex-col">
       <input type="text" name="itemNovo" id="itemNovo" placeholder="Adicione um novo item"
-        class="w-[451px] px-5 border-border-primary bg-bg-secondary border-2 rounded-lg text-base leading-[140%] text-content-tertiary hover:border-border-hover focus:outline-brand focus-within:placeholder:text-content-primary"
+        class="md:w-[451px] w-full h-11 px-5 border-border-primary bg-bg-secondary border-2 rounded-lg text-base leading-[140%] text-content-tertiary hover:border-border-hover focus:outline-brand focus-within:placeholder:text-content-primary"
         required />
       <button type="submit"
-        class="bg-brand text-always-white w-40 h-11 rounded-xl cursor-pointer hover:bg-brand-hover font-semibold">
+        class="bg-brand  text-always-white md:w-40 w-full h-11 rounded-xl cursor-pointer hover:bg-brand-hover font-semibold">
         Adicionar item
       </button>
     </form>
     <!-- List of items -->
-    <div>
+    <div id="container-items" class="w-full md:w-[627px]">
       <ul class="flex flex-col gap-3">
         
         

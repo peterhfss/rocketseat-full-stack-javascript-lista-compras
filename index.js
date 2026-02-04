@@ -7,6 +7,7 @@ const regex = /^[a-zA-ZÀ-ÿ].*$/;
 
 // Mapeando os elementos do DOM.
 const itemNovo = document.getElementById("itemNovo")
+const containerItems = document.getElementById('container-items')
 const form = document.querySelector("form")
 const items = document.querySelector("ul")
 
@@ -51,7 +52,7 @@ function criaNovoItem(texto){
     const iconDelete = document.createElement("i")
 
     // Configurando o LI
-    novoItem.className ="w-[627px] rounded-xl h-12 bg-bg-secondary flex items-center py-2 px-3 justify-between"
+    novoItem.className ="md:w-[627px] w-full gap-3 rounded-xl h-12 bg-bg-secondary flex items-center py-2 px-3 justify-between"
 
     // Configurando o Checkbox e Label
     checkboxItem.type="checkbox"
@@ -101,12 +102,14 @@ function exibirLista() {
 function showAlert() {
     // Criando o elemento de alerta
     const alert = document.createElement("div")
+
     // Estilizando o alerta
-    alert.className = "m-auto bottom-5 w-[627px] bg-danger border border-border-primary p-4 rounded-xl shadow-lg flex items-center justify-between z-50 animate-in fade-in slide-in-from-top-4 duration-300"
+    alert.className = "m-auto md:w-[627px] mt-9 w-full bg-danger border h-11 border-border-primary p-4 rounded-xl shadow-lg flex items-center justify-between z-50 animate-in fade-in slide-in-from-top-4 duration-300"
 
     // Adicionando o texto ao alerta
     const textoAlerta = document.createElement("span")
-    textoAlerta.innerHTML = `<i class="hgi hgi-stroke hgi-alert-circle text-brand "></i> <span class="text-base text-always-white font-bold">O item foi removido da lista</span>`;
+    textoAlerta.className = 'flex justify-center items-center gap-2'
+    textoAlerta.innerHTML = `<i class="hgi hgi-stroke hgi-alert-circle text-always-white text-2xl "></i> <span class="text-base text-always-white font-bold">O item foi removido da lista</span>`;
 
     // Criando o botão de fechar o alerta
     const btnFechar = document.createElement("i")
@@ -129,7 +132,7 @@ function showAlert() {
      alert.appendChild(btnFechar)
 
      // Adicionando o alerta ao body
-     document.body.appendChild(alert)
+     containerItems.appendChild(alert)
 }
 
 // Exibindo a lsita de itens ao carregar a página
